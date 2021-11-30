@@ -1,0 +1,40 @@
+---
+title: "Grace Darby - PS07"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## GitHub Documents
+
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+
+## Including Code
+
+You can include R code in the document as follows:
+
+```{r}
+library(tidyverse)
+
+alphabet_position <- tibble(
+  letter = c("S", "A", "L", "M", "O", "N"),
+  number = c(19, 1, 12, 13, 15, 14)
+)
+
+alphabet_position
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+ggplot(data = alphabet_position, mapping = aes(x = letter, y = number)) +
+  geom_col(fill = "salmon") +
+  labs(x = "Letter", y = "Position in Alphabet", title = "Letters in the Word Salmon by Position in Alphabet, Ascending Order") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
