@@ -30,7 +30,7 @@ alphabet_position
 
 You can also embed plots, for example:
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 ggplot(data = alphabet_position, mapping = aes(x = letter, y = number)) +
   geom_col(fill = "salmon") +
   labs(x = "Letter", y = "Position in Alphabet", title = "Letters in the Word Salmon by Position in Alphabet, Ascending Order") +
